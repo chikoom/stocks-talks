@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
 <div>
   {% for stock in stocks %}
     <div class="stockName">
@@ -9,3 +11,4 @@
     </div>
   {% endfor %}
 </div>
+{% endblock %}

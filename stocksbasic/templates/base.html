@@ -1,0 +1,50 @@
+{% load static %}
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Stocks Talks</title>
+        <link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
+    </head>
+    <body class="wide">
+        <div id="page" class="hfeed site">
+            <header>
+                <div class="header">
+                    <div class="main-head-wrap inner-wrap clearfix">
+                        <div id="header-logo-image">
+                            <a href="/">
+                                <img src="{% static 'images/logo.png' %}" alt="Chikoom Digital Solutions">
+                            </a>
+                        </div>
+                        <div id="header-text" class="">
+                            <h1 id="site-title">
+                                <a href="/" title="Stocks Talks" rel="home">Stocks Talks</a>
+                            </h1>
+                            <p>The jurney to Algoritmic Trading</p>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/header.jpg' %}" alt="Stocks Talks">
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="single-page clearfix">
+                    <div class="inner-wrap">
+                        <p>This is my site for Algoritmic tradin.</p>
+                        <p>Currently under development by Chikoom. Great stuff will come at the future</p>
+                        <hr>
+                        <div>
+                          {% block content %}
+                          {% endblock %}
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <footer id="colophon">
+                <div class="inner-wrap">
+                    This site developed by Chikoom - Digital Solutions. Main developer: Idan Baron. For more info, contact me at - studio@chikoom.com
+                </div>
+            </footer>
+        </div>
+    <script src="{% static 'main.js' %}" type="text/javascript"></script>
+    </body>
+</html>
