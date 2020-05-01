@@ -1,1 +1,17 @@
-stock details
+<div>
+  <h2>{{ stock.ticker }}</h2>
+  <h3>{{ stock.company }}</h3>
+  <p>Stock Price: {{ stock.price }}</p>
+  {% if stock.notes.all %}
+    <h4>Stock Notes</h4>
+    <ul>
+    {% for note in stock.notes.all  %}
+      <li>
+        <h5>{{ note.title }}</h5>
+        <p>{{ note.note_text }}</p>
+        <p>submitted at: {{ note.submition_date|date:"M d Y" }}</p>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+</div>

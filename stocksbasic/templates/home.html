@@ -1,1 +1,11 @@
-home html
+<div>
+  {% for stock in stocks %}
+    <div class="stockName">
+      <a href="{% url 'stock_details' stock.id %}">
+        <h2>{{ stock.ticker }}</h2>
+      </a>
+      <h3>{{ stock.company }}</h3>
+      <p>Price: {{ stock.price }}</p>
+    </div>
+  {% endfor %}
+</div>
