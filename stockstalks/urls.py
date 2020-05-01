@@ -4,7 +4,7 @@ from django.urls import path
 from stocksbasic import views
 
 urlpatterns = [
-    path(r'^admin/', admin.site.urls),
-    path(r'^$', views.home, name='home'),
-    path(r'^stocks/(\d+)/', views.stock_details, name='stock_details'),
+    path('admin/', admin.site.urls),
+    path('', views.home, name='home'),
+    path('stock/<int:id>/', views.stock_details, name='stock_details'),
 ]
